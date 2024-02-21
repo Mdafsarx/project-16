@@ -14,6 +14,11 @@ const array=[];
 
 for(const seat of seats){
 seat.addEventListener('click',(event)=>{
+
+    if(getInnerValue('SeatValue')==4){
+        getId('apply').removeAttribute('disabled')
+    }
+
     if(getInnerValue('SeatValue')==4)return;
 
 event.target.style.background='red'
@@ -41,13 +46,19 @@ getId('container').appendChild(p3)
 const seatValue=getInnerValue('SeatValue');
 const updatedSeatValue=seatValue+1;
 
+
 setInnerText('SeatValue',updatedSeatValue)
 
 
 // seat left
 const seatLeft=getInnerValue('SeatLeft');
 const updateSeatLeft=seatLeft-1;
-setInnerText('SeatLeft',updateSeatLeft)
+setInnerText('SeatLeft',updateSeatLeft);
+
+// apply button able
+
+
+
 
 })
 

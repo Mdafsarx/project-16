@@ -15,4 +15,5 @@ function getInnerValue(id){
 
 function setInnerText (id,value){
     getId(id).innerText=value;
-}
+};
+
