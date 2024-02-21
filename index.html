@@ -17,7 +17,7 @@
 </head>
 <body>
 
-    <header class="max-w-[80%] mx-auto py-4">
+    <header class="max-w-[80%] mx-auto py-4 " id="header">
 
 <nav>
     <div class="navbar bg-base-100">
@@ -70,7 +70,7 @@
 
     </header>
 
-<main class="">
+<main class="" id="main">
 
 <h1 class="text-3xl font-extrabold text-center my-16">Best offers for you</h1>
 
@@ -122,7 +122,7 @@
 </div>
 
 <!-- bus ticket section -->
-<section class="bg-[#F7F8F8] h-[2208px] py-16">
+<section class="bg-[#F7F8F8]  py-16">
 
 <!-- main div -->
 <div class="px-16 lg:px-32 ">
@@ -317,18 +317,20 @@
 </div>
 
 <div class="flex items-center justify-between py-2">
-    <h1 class="text-lg font-bold">Total Price</h1>
-    <h1 class="text-lg font-bold">BDT 1100</h1>
+    <h1 class="text-lg font-bold" id="totalprice">Total Price</h1>
+    <h1 class="text-lg font-bold">BDT <span id="totalPrice">0</span></h1>
 </div>
+<div id="discount" class="flex items-center justify-between px-1">
 
-<div class="flex items-center justify-center px-4">
-    <input type="text" name="" id="" class="w-[100%] h-[7vh] rounded-2xl">
+</div>
+<div class="flex items-center justify-center px-4" id="Code">
+    <input type="text" name=""  class="w-[100%] h-[7vh] rounded-2xl pl-2" id="inputCop">
     <button class="btn bg-[#1DD100] btn-sm -ml-20" disabled id="apply">Apply</button>
 </div>
 
 <div class="flex items-center justify-between py-3">
-    <h1 class="text-lg font-bold">Total Price</h1>
-    <h1 class="text-lg font-bold">BDT 1100</h1>
+    <h1 class="text-lg font-bold">Grand Price</h1>
+    <h1 class="text-lg font-bold">BDT <span id="totalGrandPrice">0</span></h1>
 </div>
 
 
@@ -342,8 +344,8 @@
 <div class="px-4 my-10 space-y-2 ">
 
     <label class="block text-xl font-bold">Number:</label>
-    <input type="number" placeholder="Enter your phone number" class="h-[6vh] w-[100%] pl-1 border-2 rounded-xl">
-    <button class="btn bg-[#1DD100] w-full">Next</button>
+    <input type="number" placeholder="Enter your phone number" class="h-[6vh] w-[100%] pl-1 border-2 rounded-xl" id="Number">
+    <button class="btn bg-[#1DD100] w-full" disabled id="next">Next</button>
     
 </div>
 
@@ -373,6 +375,20 @@
 
 
 </main>
+
+<!-- model -->
+<div class=" justify-center items-center min-h-screen fixed top-0 w-full hidden blur-sm" id="success">
+
+<div class="text-center flex flex-col justify-center items-center space-y-2 bg-[#FFFFFF] shadow-2xl p-5 rounded-3xl">
+    <img src="./images/success.png" alt="" class="py-4">
+    <h1 class="text-xl font-bold text-[#27AE60]">SUCCESS</h1>
+    <p class="text-xl font-medium">Thank you for Booking Our Bus Seats. <br>We are working hard to find the best service and deals for you. </p>
+    <p class="text-xl font-normal">Shortly you will find a confirmation in your email.</p>
+    <button class="btn bg-[#27AE60] text-white w-56 " id="continue">Continue</button>
+</div>
+
+</div>
+
 
 
 <script src="function.js"></script>
